@@ -25,10 +25,10 @@ $(window).load(function() {
     'green': rgb(0, 255, 0)
   };
 
-  $('input[name=color]', '#color').on('change', function() {
-    $("#theGame")[0].getContext("2d")
-      .fillStyle = colors[$('input[name=color]:checked', '#color').val()];
-  });
+  Rx.Observable.fromEvent($('input[name=color]', '#color'), 'change')
+    .map(_ => $('input[name=color]:checked', '#color').val())
+    .map(color => colors[color])
+    .subscribe(color => $("#theGame")[0].getContext("2d").fillStyle = color);
 
   $('input:radio[name=color][value=red]').click();
 
