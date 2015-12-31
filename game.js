@@ -15,10 +15,14 @@ $(window).load(function() {
       canvas.placeRect(e, 4);
     });
 
+  function rgb(r, g, b) {
+    return "rgb(" + r + "," + g + "," + b + ")"
+  }
+
   var colors = {
-    'red': "rgba(" + 255 + "," + 0 + "," + 0 + "," + 1 + ")",
-    'blue': "rgba(" + 0 + "," + 160 + "," + 200 + "," + 1 + ")",
-    'green': "rgba(" + 0 + "," + 255 + "," + 0 + "," + 1 + ")"
+    'red': rgb(255, 0, 0),
+    'blue': rgb(0, 160, 200),
+    'green': rgb(0, 255, 0)
   };
 
   $('input[name=color]', '#color').on('change', function() {
