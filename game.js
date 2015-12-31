@@ -26,18 +26,8 @@ $(window).load(function() {
   };
 
   $('input[name=color]', '#color').on('change', function() {
-    var ctx = $("#theGame")[0].getContext("2d");
-    switch ($('input[name=color]:checked', '#color').val()) {
-      case "red":
-        ctx.fillStyle = colors.red;
-        break;
-      case "blue":
-        ctx.fillStyle = color.blue;
-        break;
-      case "green":
-        ctx.fillStyle = colors.green;
-        break;
-    }
+    $("#theGame")[0].getContext("2d")
+      .fillStyle = colors[$('input[name=color]:checked', '#color').val()];
   });
 
   $('input:radio[name=color][value=red]').click();
