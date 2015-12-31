@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My boring Idle game</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" title="no title">
+  <script src="rx.all.js"></script>
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="kiwi.js"></script>
+  <script src="helperFunctions.js"></script>
+  <script src="game.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Chania</h1>
+  </div>
+  <div class="row">
+    <div class="col-3 menu">
+      <ul>
+        <li>The Island</li>
+        <li id="theRegion">The Region</li>
+        <li id="theCity">The City</li>
+        <li>The Food</li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <canvas id="theGame" width="200" height="200"></canvas>
+      <div>
+        <form id="color" autocomplete="off">
+          <input type="radio" name="color" value="red">red
+          <input type="radio" name="color" value="green">green
+          <input type="radio" name="color" value="blue">blue
+        </form>
+      </div>
+      <div id="result"></div>
+    </div>
+  </div>
+</body>
+
+</html>
